@@ -1,0 +1,5 @@
+Botões,bordas : #e91e60
+Textos : #c81650
+background seção : #c81650
+background rodapé : #212121
+

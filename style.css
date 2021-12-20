@@ -1,0 +1,460 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+}
+
+
+body{
+    background: grey;    
+}
+
+a{
+    color: white;
+}
+
+#container{
+    display: grid;
+}
+
+main, #article, #curiosidades, #sobreNos, footer{
+    height: 100px;
+    
+    padding: 0 2vw;
+}
+
+#home{
+    background: url(./imagens/bg1-over.jpg) no-repeat center;
+    background-size: cover;
+    color: white;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;    
+}
+
+#btnMenu{
+    display:none
+}
+
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a{
+    display: inline-block;  
+    margin: 5px;
+    width: 7vw;
+    height: 3vh;
+    text-align: center;
+    line-height: 3vh;
+    font-weight: 700;
+}
+ 
+header .nav-aside{
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
+
+
+header ul, header li  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .nav-aside input[type="search"]{
+    background: inherit;
+    border: none;
+    width: 6vw;
+    margin:0 .3vw ;  
+    border-radius: .2vw;  
+    font-size: 16px;
+    padding: 0 1vw;
+}
+
+header .nav-aside input[type="search"]::placeholder{
+    color: white;
+}
+
+header .nav-aside input[type="search"]:focus{
+    background: rgba(45, 2, 65, 0.151);
+    height: 4vh;
+    width: 10vw;
+    transition: .5s;
+}
+
+header img{
+    width:25px;
+    margin-top: 5px;
+}
+
+header .nav-aside a{
+    font-size: 20px;   
+}
+
+
+
+
+ main{
+     height: 60vh;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     text-align: center;
+ }
+
+ main p{
+     width: 50vw;
+ }
+
+ main button, .montanhas button, article button{
+     background: inherit;
+     border: 2px solid #e91e60;
+     color: #e91e60;
+     height: 4vh;
+     width: 9.5vw;
+     margin-top: 2vh;
+     font-size: 20px;
+     cursor: pointer;
+ }
+
+ main button:hover, .montanhas button:hover{
+     background: rgba(100, 5, 92, 0.322);
+     color: #ff39b3;
+     border: 2px solid #ff39b3;
+ }
+
+ main img{
+     width:60px;
+     cursor: pointer;
+ }
+
+ #article{
+     display: flex;
+     background: #eeeeee;
+     height: 45vh;
+ }
+
+ #article img{
+     height: 50vh;
+     width: 30vw;
+     margin-top: -2.5vh;
+     border-bottom: 5px solid #e91e60;
+     filter: drop-shadow(1px 5px 10px black);
+ }
+
+ 
+
+ #article .montanhas{
+     margin-left: 10vw;
+     width: calc(60vw - 5vw);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ }
+
+ #article .montanhas h2{
+     color:#e91e60
+ }
+
+ #article .montanhas p{
+     width: 40vw;
+     color: gray;
+ }
+
+
+ article{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+
+
+ #curiosidades{
+     background: url(./imagens/bg4.jpg) no-repeat center;
+     background-size: cover;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 45vh;
+/*grid-area: ;*/
+ }
+
+#curiosidades h2, #curiosidades p{
+    color:white;
+    text-align: center;
+}
+
+#curiosidades p{
+    width: 50vw;
+}
+
+ #curiosidades img{
+    width: 70px;
+    cursor: pointer;
+ }
+
+
+
+#sobreNos{
+display: flex;
+height: 45vh;
+background: #eeeeee;
+
+    /*grid-area: ;*/
+}
+
+#sobreNos img{
+    height: 50vh;
+    width: 30vw;
+    margin-top: -2.5vh;
+    border-bottom: 5px solid #e91e60;
+    filter: drop-shadow(1px 5px 10px black);
+}
+
+#sobreNos .montanhas{
+    margin: 0 10vw;
+    width: calc(60vw - 5vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-end;
+    text-align: right;
+}
+
+#sobreNos h2{
+    color:#e91e60;
+}
+
+#sobreNos .montanhas p{
+    color: gray;
+    margin: 0;
+    
+
+}
+
+footer{
+    /* grid-area: ;    */
+    display: flex;
+    flex-direction: column;
+    background: #212121;
+}
+
+footer img{
+    width: 30px;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: row;   
+ /* grid-area: ;    */
+}
+
+footer ul li a{
+    display: inline-block;
+    width: 7vw;
+    margin: .5vh ;
+    text-align: center;
+}
+
+@media screen and (max-width:767px) {
+    body{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    html{
+        scrollbar-color:#ff005594 #fff;
+        scrollbar-width:thin ;
+    }
+  
+    header{
+        padding: 0 5px;
+    }
+    nav{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        left: 10vw;
+        margin-top: 50vh;
+        height: 40vh;
+        width: 80vw;
+        background: rgba(1,1,1,.9);
+        border-radius: 0 0 10px 10px;
+    }     
+
+    .exibirMenu{
+        display: block;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li a{
+        width: 78vw;
+        height: 60px;
+        line-height: 60px;
+    }
+
+    nav ul li {
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        border-bottom: 1px solid gray;
+
+    }
+
+    header  {
+        width: 100vw;
+        justify-content: space-between;
+    }
+
+    
+
+    #btnMenu{
+        display:block;
+        height: 50px;
+        width: 65px;
+        background: url(./icones/menu-fechado.png) no-repeat;
+        background-size: 50px;
+        border: none;
+        cursor: pointer;
+    }
+
+    
+
+    header .nav-aside input[type="search"]{
+        width: 12vw ;
+    }
+
+    header .nav-aside input[type="search"]:focus{
+        width: 20vw ;
+    }
+
+    main p {
+        width: 80vw;
+    }
+
+    main img{
+        width: 10vw;
+    }
+
+    main button, article button{
+        width: 30vw;
+        background: rgba(100, 5, 92, 0.322);
+        color: #ff39b3;
+        border: 2px solid #ff39b3;
+    }
+
+    #article{
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: center;
+        height: 80vh;
+    }
+
+
+    #article .montanhas{
+        margin: 10px 0;
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+    }
+   
+   
+    #article .montanhas p{
+        width: 80vw;
+    }
+
+    #article button{
+        width: 30vw;
+    }
+
+    #article img{
+        margin: 0;
+        height: 30vh;
+        width: 80vw;
+    }
+
+    article button{
+       width: 30vw;
+    }
+
+    #curiosidades{
+        height: 60vh;
+    }
+
+    #curiosidades p{
+        width: 70vw;
+    }
+
+    #curiosidades img{
+        width: 6vw;
+    }
+
+    #sobreNos{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 85vh;
+
+    }
+
+    #sobreNos .montanhas {
+        width: 80vw;
+        margin: 0;
+        align-items: center;
+        
+    }
+
+    #sobreNos button{
+        width: 30vw;
+    }
+
+    #sobreNos img{
+        width: 35vw;
+        height: 30vh;
+    }
+    footer{
+        height:20vh ;
+        width: 100vw;
+    }
+    footer ul{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    footer ul li a{
+        width: 30vw;
+        
+    }
+
+}
+
+@media screen and (min-width:768px) and (max-width:1025px) {
+    main button, .montanhas button{
+        width: 30vw;
+    }
+
+    nav ul li a{
+        width: 15vw;
+    }
+
+    article button{
+        width: 30vw;
+         }
+    }
+
